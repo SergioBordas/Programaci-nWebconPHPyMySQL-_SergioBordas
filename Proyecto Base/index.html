@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Propiedades</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="js/materialize.min.css">
+    
+    <link rel="stylesheet" href="css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
+
+    <link rel="stylesheet" href="css/customColors.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="rowTitulo">
+            <h4>Buscador</h4>
+        </div>
+
+        <div class="colFiltros">
+            <div class="filtrosContenido">
+                <div class="tituloFiltros">
+                    <h5>Realiza una búsqueda personalizada</h5>
+                </div>
+                <form>
+                    <div class="filtroCiudad input-field">
+                        <select id="ciudad">
+                            <option value="" disabled selected>Cargando Ciudades...</option>
+                        </select>
+                        <label for="ciudad">Ciudad:</label>
+                    </div>
+
+                    <div class="filtroTipo input-field">
+                        <select id="tipo">
+                            <option value="" disabled selected>Cargando Tipos...</option>
+                        </select>
+                        <label for="tipo">Tipo:</label>
+                    </div>
+
+                    <div class="filtroPrecio">
+                        <label for="rangoPrecio">Precio:</label>
+                        <input type="text" id="rangoPrecio" name="rangoPrecio" value="">
+                        <p id="rangoPrecioTexto" class="center-align"></p>
+                    </div>
+
+                    <div class="botonField">
+                        <input type="button" class="btn" id="buscar" value="BUSCAR">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="colContenido">
+            <div class="tituloContenido">
+                <h5>Resultados de la búsqueda:</h5>
+                <button type="button" class="btn" id="mostrarTodos">MOSTRAR TODOS</button>
+            </div>
+            <div class="divider"></div>
+            <div class="resultadosBusqueda">
+                <p>Utiliza los filtros o haz clic en "Mostrar Todos" para ver propiedades.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.0.0.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+/*
+ * Archivo: css/index.css
+ * Descripción: Estilos personalizados para el buscador de propiedades.
+ */
+
+/* Imagen de fondo del body */
+body {
+    background-image: url('../img/fondo_ciudad.jpg'); /* RUTA DE LA IMAGEN DE LA CIUDAD */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #e0e0e0;
+}
+
+/* Contenedor principal del buscador */
+.contenedor {
+    background-color: rgba(242, 242, 242, 0.85);
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 700px;
+    height: auto;
+    align-content: flex-start;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 1200px;
+    min-width: 320px;
+}
+
+/* Título superior "Buscador" */
+.rowTitulo {
+    width: 100%;
+    text-align: center;
+    background-color: #648C7D;
+    color: #F2F2F2;
+    height: 130px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Columna de filtros (izquierda) */
+.colFiltros {
+    width: 25%;
+    min-height: 570px;
+    box-sizing: border-box;
+}
+.filtrosContenido {
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    min-height: 570px;
+}
+.colFiltros form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título dentro de la columna de filtros */
+.tituloFiltros {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* Estilos para Materialize Selects y otros inputs */
+.input-field {
+    width: 90%;
+    margin-bottom: 25px;
+}
+.input-field label {
+    pointer-events: none;
+    left: 0.75rem;
+    color: #9e9e9e;
+    font-size: 1rem;
+}
+.select-wrapper input.select-dropdown {
+    color: #424242;
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.input-field select:focus + label,
+.input-field .select-wrapper.active + label,
+.input-field input.select-dropdown:focus + label,
+.input-field input.select-dropdown.active + label {
+    transform: translateY(-14px) scale(0.8);
+    transform-origin: 0 0;
+    color: #648C7D;
+}
+.dropdown-content li > span {
+    color: #424242 !important;
+}
+
+/* Filtro de Precio (slider) */
+.filtroPrecio {
+    margin: 15px auto;
+    width: 90%;
+    height: auto;
+    padding-bottom: 15px;
+}
+.filtroPrecio label {
+    font-size: 1rem;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #424242;
+}
+#rangoPrecioTexto {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #648C7D;
+}
+
+/* Botón de búsqueda */
+.botonField {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+.botonField input {
+    color: #F2F2F2;
+    background-color: #648C7D;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+.botonField input:hover {
+    background-color: #4e7063;
+}
+
+/* Columna de contenido (derecha) para resultados */
+.colContenido {
+    width: 75%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #F2F2F2;
+    border-radius: 0 8px 8px 0;
+    box-sizing: border-box;
+    min-height: 570px;
+}
+.tituloContenido {
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.tituloContenido h5 {
+    width: 100%;
+    margin: 0.5rem 5px 0.5rem;
+    font-size: 2rem;
+    color: #424242;
+    text-align: center;
+}
+
+/* Botón "Mostrar Todos" */
+.tituloContenido button {
+    background: #648C7D;
+    color: #F2F2F2;
+    margin-top: 1rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.tituloContenido button:hover {
+    background-color: #4e7063;
+}
+
+.divider {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 15px 0;
+}
+
+/* Contenedor de resultados de búsqueda */
+.resultadosBusqueda {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 15px;
+}
+
+/* Estilo para cada propiedad (tarjeta) */
+.itemMostrado {
+    width: calc(50% - 15px); /* Dos columnas con espacio entre ellas */
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .itemMostrado {
+        width: 100%; /* Una columna en pantallas pequeñas */
+    }
+    .contenedor {
+        width: 95%;
+        flex-direction: column;
+    }
+    .colFiltros, .colContenido {
+        width: 100%;
+        border-radius: 0;
+        min-height: auto;
+    }
+    .colFiltros {
+        border-radius: 8px 8px 0 0;
+    }
+    .colContenido {
+        border-radius: 0 0 8px 8px;
+    }
+}
+@media (max-width: 480px) {
+    .itemMostrado {
+        flex-direction: column; /* Apilar imagen y contenido en móviles muy pequeños */
+    }
+    .itemMostrado img {
+        width: 100% !important;
+        max-width: 100%;
+        border-radius: 4px 4px 0 0;
+    }
+    .card-stacked {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.itemMostrado img {
+    width: 35% !important;
+    max-width: 150px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px 0 0 4px;
+}
+.precioTexto {
+    font-size: 1.3rem;
+    color: #ffab40;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.card-stacked {
+    width: 65%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-content p {
+    margin-bottom: 5px;
+}
+.card-action {
+    text-align: right;
+    padding: 10px 15px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: auto;
+}
+.card-action a {
+    color: #648C7D !important;
+    font-weight: bold;
+}
+
+/* Texto cuando no hay resultados */
+.resultadosBusqueda p {
+    margin-top: 20px;
+    text-align: center;
+    color: #757575;
+    font-style: italic;
+    width: 100%;
+}
